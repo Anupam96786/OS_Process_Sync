@@ -1,4 +1,5 @@
 import shared_variables.Data;
+import shared_variables.Process;
 import shared_variables.ProcessQueue;
 
 public class Consumer {
@@ -22,7 +23,8 @@ public class Consumer {
             } else {
                 try {
                     Thread.sleep(5000);
-                    System.out.println(ProcessQueue.poll().getData());
+                    Process process = ProcessQueue.poll();
+                    System.out.println("PID " + process.getPID() + "\tData: " + process.getData());
                 } catch (Exception e) {
                     System.exit(-1);
                 }
