@@ -21,14 +21,6 @@ public class Data {
         });
     }
 
-    // static void storeMaxSize(int value) {
-    //     pref.put("maxSize", Integer.toString(value));
-    // }
-
-    // static int getMaxSize() {
-    //     return Integer.parseInt(pref.get("maxSize", "10"));
-    // }
-
     static void storeProcessQueue(Queue<Process> p) {
         pref.put("processQueue", new Gson().toJson(p));
     }
