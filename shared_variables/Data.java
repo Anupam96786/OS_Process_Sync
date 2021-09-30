@@ -27,7 +27,8 @@ public class Data {
 
     static Queue<Process> getProcessQueue() {
         Queue<Process> q;
-        Type type = new TypeToken<Queue<Process>>(){}.getType();
+        Type type = new TypeToken<Queue<Process>>() {
+        }.getType();
         q = new Gson().fromJson(pref.get("processQueue", ""), type);
         if (q == null) {
             q = new LinkedList<>();

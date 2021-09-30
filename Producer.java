@@ -24,7 +24,8 @@ public class Producer {
                 try {
                     System.out.print("Enter Data: ");
                     Process process = new Process(sc.nextInt());
-                    System.out.println("Process created.\tPID: " + process.getPID() + "\tData: " + process.getData() + "\n");
+                    System.out.println(
+                            "Process created.\tPID: " + process.getPID() + "\tData: " + process.getData() + "\n");
                     ProcessQueue.add(process);
                 } catch (Exception e) {
                     System.exit(-1);
