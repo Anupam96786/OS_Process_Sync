@@ -2,7 +2,7 @@ package shared_variables;
 
 public class Process {
 
-    private int PID = 0 + (int)(Math.random() * ((99999 - 0) + 1));
+    private int PID = 1000 + (int)(Math.random() * ((99999 - 1000) + 1));
     private int data;
 
     public Process(int data) {
